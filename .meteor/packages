@@ -25,3 +25,4 @@ accounts-ui
 accounts-twitter
 peppelg:bootstrap-3-modal
 raix:ui-dropped-event
+iron:router
