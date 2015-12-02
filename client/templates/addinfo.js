@@ -4,15 +4,7 @@ Template.addInfo.events({
 		var title = event.target.title.value;
 		var story = event.target.story.value;
 
-		ImageInfo.insert({
-			title: title,
-			story: story,
-			imageId: imageId,
-			imageUrl: '/cfs/files/Images/'+imageId,
-			userId: Meteor.userId(),
-			username: Meteor.user().profile.name,
-			createdAt: new Date()
-		});
+		Meteor.call('addImageInfo', imageId, title, story);
 
 		Modal.hide('addInfo');
 
